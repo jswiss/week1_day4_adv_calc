@@ -19,13 +19,13 @@ basicCalc.addEventListener("click", function(){
   console.log(basicNum2);
   var basicOp = document.getElementById("basic-operation").value;
   console.log(basicOp);
-    if (basicOp === "plus") {
+    if (basicOp === "+") {
       console.log(basicNum1 + basicNum2);
-    } else if (basicOp === "minus") {
+    } else if (basicOp === "-") {
       console.log(basicNum1 - basicNum2);
-    } else if (basicOp === "multiplied by") {
+    } else if (basicOp === "*") {
       console.log(basicNum1 * basicNum2); 
-    } else if (basicOp === "divided by") {
+    } else if (basicOp === "/") {
       console.log(basicNum1 / basicNum2);
     };     
 });
