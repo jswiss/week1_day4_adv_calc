@@ -26,5 +26,9 @@ basicCalc.addEventListener("click", function(){
 
     console.log(ans1);
 
+  //changes class name of answer box to "show"
+  document.getElementById("basic-answer").className = "show";
+
+  //changes innerHTML to Basic Calculator's answer
   document.getElementById("basic-answer-alert").innerHTML = ans1;  
 });
