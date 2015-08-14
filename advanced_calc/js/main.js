@@ -1,18 +1,14 @@
+
 var basicCalc = document.getElementById("basic-calc");
-
-
+var bmiCalc = document.getElementById("bmi-calc");
 
 basicCalc.addEventListener("click", function(){
   
   //defines variables and sets them equal to numbers
   var basicNum1 = parseFloat(document.getElementById("basic-num-1").value);
   var basicNum2 = parseFloat(document.getElementById("basic-num-2").value);
-  
-  console.log(basicNum1);
-  console.log(basicNum2);
   var basicOp = document.getElementById("basic-operation").value;
-  console.log(basicOp);
-
+  
   //If statement to work the operator
     if (basicOp === "+") {
       var ans1 = basicNum1 + basicNum2;
@@ -23,8 +19,6 @@ basicCalc.addEventListener("click", function(){
     } else if (basicOp === "/") {
       var ans1 = basicNum1 / basicNum2;
     }; 
-
-    console.log(ans1);
 
   //changes class name of answer box to "show"
   document.getElementById("basic-answer").className = "show";
@@ -50,26 +44,20 @@ bmiUnits.addEventListener("change", function() {
   }
   });
 
-var bmiCalc = document.getElementById("bmi-calc");
 
 bmiCalc.addEventListener("click", function(){
   
   //defines variables and sets them equal to numbers
+  
   var mass = parseFloat(document.getElementById("bmi-mass").value);
   var height = parseFloat(document.getElementById("bmi-height").value);
 
-  console.log(bmiUnitsCorrect);
-  console.log(mass);
-  console.log(height);
-
   //If statement to work the set calculation
   if (bmiUnitsCorrect === "imperial") {
-    var ans2 = (mass * 703 )/ Math.pow(height, 2); 
+    var ans2 = Math.round(((mass * 703 ) * 100)/ Math.pow(height, 2)) / 100; 
   } else {
-    var ans2 = mass / Math.pow(height, 2);
+    var ans2 = Math.round((mass * 100) / Math.pow(height, 2)) / 100;
   } 
-
-  console.log(ans2);
 
   //changes class name of answer box to "show"
   document.getElementById("bmi-answer").className = "show";
